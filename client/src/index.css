@@ -1,0 +1,422 @@
+/* Clean Eco-Friendly Palette */
+:root {
+  --eco-green-50: #f0fdf4;
+  --eco-green-100: #dcfce7;
+  --eco-green-200: #bbf7d0;
+  --eco-green-500: #22c55e;
+  --eco-green-600: #16a34a;
+  --eco-green-700: #15803d;
+
+  --eco-blue-50: #f0f9ff;
+  --eco-blue-100: #e0f2fe;
+  --eco-blue-500: #0ea5e9;
+  --eco-blue-600: #0284c7;
+
+  --eco-amber-50: #fffbeb;
+  --eco-amber-100: #fef3c7;
+  --eco-amber-500: #f59e0b;
+  --eco-amber-600: #d97706;
+
+  --eco-slate-50: #f8fafc;
+  --eco-slate-100: #f1f5f9;
+  --eco-slate-200: #e2e8f0;
+  --eco-slate-400: #94a3b8;
+  --eco-slate-500: #64748b;
+  --eco-slate-600: #475569;
+  --eco-slate-700: #334155;
+  --eco-slate-800: #1e293b;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(
+    135deg,
+    var(--eco-green-50) 0%,
+    var(--eco-slate-50) 100%
+  );
+  min-height: 100vh;
+  color: var(--eco-slate-700);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* New Summary Cards Row Layout */
+.summary-cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.summary-card {
+  flex: 1;
+  min-width: 200px;
+  max-width: calc(25% - 12px); /* 25% width with gap consideration */
+  border-radius: 12px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+  transition: all 0.2s ease;
+  height: 120px; /* Fixed height for all cards */
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-card:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+  transform: translateY(-1px);
+}
+
+/* Smaller icon for summary cards */
+.eco-icon-small {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+/* Improved Grid System for Perfect Symmetry */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Ensure all cards have equal height and spacing */
+.eco-card {
+  background: white;
+  border: 1px solid var(--eco-slate-200);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+  transition: all 0.2s ease;
+  height: 100%; /* Ensure equal height */
+  display: flex;
+  flex-direction: column;
+}
+
+.eco-card:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+  transform: translateY(-1px);
+}
+
+/* Ensure gradient cards maintain equal height */
+.eco-card-green,
+.eco-card-blue,
+.eco-card-amber {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.eco-card-green {
+  background: linear-gradient(
+    135deg,
+    var(--eco-green-500) 0%,
+    var(--eco-green-600) 100%
+  );
+  color: white;
+  border: none;
+}
+
+.eco-card-blue {
+  background: linear-gradient(
+    135deg,
+    var(--eco-blue-500) 0%,
+    var(--eco-blue-600) 100%
+  );
+  color: white;
+  border: none;
+}
+
+.eco-card-amber {
+  background: linear-gradient(
+    135deg,
+    var(--eco-amber-500) 0%,
+    var(--eco-amber-600) 100%
+  );
+  color: white;
+  border: none;
+}
+
+/* Clean Headers */
+.eco-header {
+  background: linear-gradient(
+    90deg,
+    var(--eco-green-50) 0%,
+    var(--eco-slate-50) 100%
+  );
+  border-bottom: 1px solid var(--eco-slate-200);
+  border-radius: 12px 12px 0 0;
+}
+
+.eco-header-blue {
+  background: linear-gradient(
+    90deg,
+    var(--eco-blue-50) 0%,
+    var(--eco-green-50) 100%
+  );
+  border-bottom: 1px solid var(--eco-blue-200);
+}
+
+.eco-header-amber {
+  background: linear-gradient(
+    90deg,
+    var(--eco-amber-50) 0%,
+    var(--eco-green-50) 100%
+  );
+  border-bottom: 1px solid var(--eco-amber-200);
+}
+
+/* Clean Toggle Buttons */
+.eco-toggle-group {
+  background: var(--eco-slate-100);
+  border-radius: 8px;
+  padding: 4px;
+  border: 1px solid var(--eco-slate-200);
+  display: flex;
+}
+
+.eco-toggle {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin: 2px;
+  background: transparent;
+  color: var(--eco-slate-600);
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.eco-toggle.active {
+  background: white;
+  color: var(--eco-slate-800);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.eco-toggle:hover {
+  color: var(--eco-slate-800);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Icon Containers */
+.eco-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+/* Chart Container */
+.eco-chart {
+  height: 400px;
+  padding: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.eco-chart-small {
+  height: 300px;
+  padding: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.eco-chart.loading,
+.eco-chart-small.loading {
+  opacity: 0.6;
+}
+
+/* Clean Typography */
+.eco-title {
+  color: var(--eco-slate-800);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.eco-subtitle {
+  color: var(--eco-slate-600);
+  font-weight: 400;
+}
+
+.eco-text-muted {
+  color: var(--eco-slate-500);
+}
+
+/* Tooltip Styling */
+.eco-tooltip {
+  background: white;
+  border: 1px solid var(--eco-slate-200);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  padding: 12px;
+}
+
+/* Loading and Error States */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: var(--eco-slate-500);
+}
+
+.error {
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Improved spacing utilities */
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+.text-lg {
+  font-size: 1.125rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+}
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+/* Responsive adjustments for summary cards */
+@media (max-width: 900px) {
+  .summary-card {
+    max-width: calc(50% - 8px);
+  }
+}
+
+@media (max-width: 600px) {
+  .summary-card {
+    max-width: 100%;
+  }
+}
+
+/* Responsive grid improvements */
+@media (min-width: 640px) {
+  .sm\\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .md\\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .lg\\:flex-row {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
